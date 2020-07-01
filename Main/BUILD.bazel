@@ -2,5 +2,5 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name = "main",
-    srcs = ["01_recursion_static_variables.cpp"],
+    srcs = ["03_recursion_tree.cpp"],
 )
