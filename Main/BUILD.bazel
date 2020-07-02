@@ -2,5 +2,5 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name = "main",
-    srcs = ["05_recursion_nested_recursion.cpp"],
+    srcs = ["06_recursion_sum_of_first_numbers.cpp"],
 )
