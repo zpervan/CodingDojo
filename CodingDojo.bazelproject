@@ -1,5 +1,5 @@
 directories:
-  Main
+  AlgorithmsAndDataStructures
 
 targets:
-  //Main/...:all
+  //AlgorithmsAndDataStructures/...:all
