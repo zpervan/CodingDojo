@@ -4,7 +4,7 @@
         {
             "label": "CodingDojo | Build Debug",
             "type": "shell",
-            "command": "bazel build //Main:main -c dbg",
+            "command": "bazel build //AlgorithmsAndDataStructures:algorithms_and_data_structures -c dbg",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -13,7 +13,7 @@
         {
             "label": "CodingDojo | Build Release",
             "type": "shell",
-            "command": "bazel build //Main:main -c opt",
+            "command": "bazel build //AlgorithmsAndDataStructures:algorithms_and_data_structures -c opt",
         }
     ]
 }

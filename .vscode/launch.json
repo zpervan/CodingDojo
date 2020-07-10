@@ -9,7 +9,7 @@
             "preLaunchTask": "CodingDojo | Build Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bazel-out/k8-dbg/bin/Main/main",
+            "program": "${workspaceFolder}/bazel-out/k8-dbg/bin/AlgorithmsAndDataStructures/algorithms_and_data_structures",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
