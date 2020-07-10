@@ -2,5 +2,5 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name = "algorithms_and_data_structures",
-    srcs = ["Recursion/09_recursion_taylor_series.cpp"],
+    srcs = ["Recursion/10_recursion_fibonacci_memoization.cpp"],
 )
