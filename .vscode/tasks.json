@@ -11,9 +11,9 @@
             }
         },
         {
-            "label": "CodingDojo | Build Release",
+            "label": "CodingDojo | Run Release",
             "type": "shell",
-            "command": "bazel build //AlgorithmsAndDataStructures:algorithms_and_data_structures -c opt",
+            "command": "bazel run //AlgorithmsAndDataStructures:algorithms_and_data_structures -c opt",
         }
     ]
 }
