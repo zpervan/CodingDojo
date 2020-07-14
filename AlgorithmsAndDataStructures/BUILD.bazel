@@ -2,5 +2,5 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name = "algorithms_and_data_structures",
-    srcs = ["Array/01_array_basic.cpp"],
+    srcs = ["Array/03_array_insert.cpp"],
 )
