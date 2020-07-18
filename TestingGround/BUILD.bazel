@@ -1,0 +1,7 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "testing_ground",
+    srcs = ["testing_ground.cpp"],
+    deps = ["@fmtlib//:fmt"],
+)

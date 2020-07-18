@@ -14,6 +14,11 @@
             "label": "CodingDojo | Run Release",
             "type": "shell",
             "command": "bazel run //AlgorithmsAndDataStructures:algorithms_and_data_structures -c opt",
+        },
+        {
+            "label": "TestingGround | Run Release",
+            "type": "shell",
+            "command": "bazel run //TestingGround:testing_ground -c opt",
         }
     ]
 }
