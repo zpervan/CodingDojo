@@ -1,5 +1,11 @@
 directories:
   AlgorithmsAndDataStructures
+  CppConcepts
+  DesignPatterns
+  TestingGround
 
 targets:
   //AlgorithmsAndDataStructures/...:all
+  //CppConcepts/...:all
+  //DesignPatterns/...:all
+  //TestingGround/...:all
