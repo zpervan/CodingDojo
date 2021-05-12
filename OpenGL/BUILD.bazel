@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name="opengl_main",
-    srcs=["example.cpp"],
+    srcs=["01_cube.cpp"],
     linkopts=["-lglut",
               "-lGLU",
               "-lGL"],
