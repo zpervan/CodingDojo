@@ -1,0 +1,8 @@
+cc_binary(
+    name="opengl_main",
+    srcs=["example.cpp"],
+    linkopts=["-lglut",
+              "-lGLU",
+              "-lGL"],
+    linkstatic=True,
+)
