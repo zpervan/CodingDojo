@@ -1,7 +1,9 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
-    name = "testing_ground",
-    srcs = ["testing_ground.cpp"],
-    deps = ["@fmtlib//:fmt"],
+    name="testing_ground",
+    srcs=["memory_leak.cpp"],
+    deps=["@fmtlib//:fmt"],
+    linkopts=["-fsanitize=address,undefined"],
+    copts=["-fsanitize=address,undefined"]
 )
