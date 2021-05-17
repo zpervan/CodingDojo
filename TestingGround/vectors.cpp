@@ -33,6 +33,11 @@ Vector2D<T> operator-(const Vector2D<T> &first, Args... args) {
 }
 
 template <typename T>
+double operator*(const Vector2D<T> &lhs, const Vector2D<T> &rhs) {
+  return lhs.x * rhs.x + lhs.y * rhs.y;
+}
+
+template <typename T>
 double CalculateVectorMagnitude(const Vector2D<T> &vector) {
   return std::sqrt(std::pow(vector.x, static_cast<T>(2)) +
                    std::pow(vector.y, static_cast<T>(2)));
@@ -67,6 +72,9 @@ int main() {
 
   Vector2D<int> subtraction = a - b - c - d;
   PrintVectorValues(subtraction);
+
+  const auto product = a * b;
+  fmt::print("The product of a * b multiplication is {}", product);
 
   return 0;
 }
