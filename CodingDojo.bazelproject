@@ -1,11 +1,11 @@
 directories:
-  AlgorithmsAndDataStructures
-  CppConcepts
-  DesignPatterns
-  TestingGround
+  .
+  -.clwb
+  -.clion_targets
+  -bazel-bin
+  -bazel-opencv_bazel
+  -bazel-out
+  -bazel-testlogs
 
 targets:
-  //AlgorithmsAndDataStructures/...:all
-  //CppConcepts/...:all
-  //DesignPatterns/...:all
-  //TestingGround/...:all
+  -@fmtlib//...
