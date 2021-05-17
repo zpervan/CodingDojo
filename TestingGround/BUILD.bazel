@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name="testing_ground",
-    srcs=["memory_leak.cpp"],
+    srcs=["vectors.cpp"],
     deps=["@fmtlib//:fmt"],
     linkopts=["-fsanitize=address,undefined"],
     copts=["-fsanitize=address,undefined"]
