@@ -1,0 +1,8 @@
+# Define compiler (avoid CCache issues)
+build --client_env=CC=/usr/bin/clang-11
+build --client_env=CXX=/usr/bin/clang++-11
+
+# Compiler options
+build --strip=always
+build --cxxopt=-std=c++2a
+build --cxxopt=-Werror
