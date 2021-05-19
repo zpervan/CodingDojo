@@ -1,5 +1,5 @@
-#include "ThirdParty/fmt/include/fmt/core.h"
 #include <cmath>
+#include <fmt/format.h>
 
 template <typename T> struct Vector2D {
   T x;
