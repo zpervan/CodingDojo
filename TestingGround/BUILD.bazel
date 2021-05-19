@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name = "testing_ground",
-    srcs = ["vectors.cpp"],
+    srcs = ["pimpl.cpp"],
     linkopts = ["-lfmt"],
     #    deps = ["@fmtlib//:fmt"],
     #    linkopts=["-fsanitize=address,undefined"],
