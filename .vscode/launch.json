@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "CodingDojo | Debug",
-            "preLaunchTask": "CodingDojo | Build Debug",
+            "name": "Run Debug",
+            "preLaunchTask": "Linux | Run Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bazel-out/k8-dbg/bin/AlgorithmsAndDataStructures/algorithms_and_data_structures",
+            "program": "${workspaceFolder}/bazel-out/k8-dbg/bin/TestingGround/testing_ground",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

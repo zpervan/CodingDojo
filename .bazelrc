@@ -1,8 +1,10 @@
-# Define compiler (avoid CCache issues)
-build --client_env=CC=/usr/bin/clang-11
-build --client_env=CXX=/usr/bin/clang++-11
+# Specific compiler paths for Linux and Windows
+build:linux --client_env=CC="/usr/bin/clang-11"
+build:linux --client_env=CXX="/usr/bin/clang++-11"
+build:windows --client_env=CC="C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe"
+build:windows --client_env=CXX="C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe"
 
 # Compiler options
-build --strip=always
-build --cxxopt=-std=c++2a
+build:linux --cxxopt=-std=c++2a
+build:windows --cxxopt=/std:c++17
 build --cxxopt=-Werror

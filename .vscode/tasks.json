@@ -2,23 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "CodingDojo | Build Debug",
+            "label": "Linux | Build Debug",
             "type": "shell",
-            "command": "bazel build //AlgorithmsAndDataStructures:algorithms_and_data_structures -c dbg",
+            "command": "bazel build //TestingGround:testing_ground --config=linux -c dbg",
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "CodingDojo | Run Release",
+            "label": "Linux | Run Debug",
             "type": "shell",
-            "command": "bazel run //AlgorithmsAndDataStructures:algorithms_and_data_structures -c opt",
+            "command": "bazel run //TestingGround:testing_ground --config=linux -c dbg",
         },
         {
-            "label": "TestingGround | Run Release",
+            "label": "Linux | Run Release",
             "type": "shell",
-            "command": "bazel run //TestingGround:testing_ground -c opt",
+            "command": "bazel run //TestingGround:testing_ground --config=linux -c opt",
         }
     ]
 }
