@@ -1,10 +1,12 @@
+derive_targets_from_directories: true
+
 directories:
   .
   -.clwb
-  -.clion_targets
+  -.vscode
   -bazel-bin
-  -bazel-opencv_bazel
   -bazel-out
+  -bazel-plotingZ
   -bazel-testlogs
 
 targets:
