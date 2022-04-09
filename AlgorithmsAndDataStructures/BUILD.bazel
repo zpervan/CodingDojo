@@ -2,5 +2,8 @@ load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
     name = "algorithms_and_data_structures",
-    srcs = ["Array/05_array_binary_search.cpp"],
+    srcs = ["main.cpp"],
+    deps = [
+        "//AlgorithmsAndDataStructures/Sorting:sorting",
+    ],
 )

@@ -1,0 +1,6 @@
+#ifndef CODINGDOJO_SINGLE_HEADER_H
+#define CODINGDOJO_SINGLE_HEADER_H
+
+#include "01_insertion_sort.h"
+
+#endif  // CODINGDOJO_SINGLE_HEADER_H
