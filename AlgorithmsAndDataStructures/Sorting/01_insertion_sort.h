@@ -1,23 +1,27 @@
 #ifndef CODINGDOJO_01_INSERTION_SORT_H
 #define CODINGDOJO_01_INSERTION_SORT_H
 
-#include <vector>
 #include <iostream>
+#include <vector>
+
 #include "utility.h"
 
-void insertionSort()
+namespace
 {
-    std::vector<int> values{5, 2, 4, 6, 1, 3};
-
+template <typename T>
+void increasing(std::vector<T>& values)
+{
+    std::size_t j;
+    int key;
 
     for (std::size_t i = 1; i < values.size(); i++)
     {
-        int key = values[i];
-        std::size_t j = i - 1;
+        key = values[i];
+        j = i - 1;
         while ((j >= 0) && (values[j] > key))
         {
             values[j + 1] = values[j];
-            j = j - 1;
+            --j;
         }
 
         if (j + 1 < values.size())
@@ -27,6 +31,46 @@ void insertionSort()
     }
 
     std::cout << values;
+}
+
+template <typename T>
+void decreasing(std::vector<T>& values)
+{
+    std::size_t i = values.size() - 2;
+    std::size_t j;
+    int key;
+    do
+    {
+        key = values[i];
+        j = i + 1;
+        while ((j < values.size()) && (values[j] > key))
+        {
+            values[j - 1] = values[j];
+            ++j;
+        }
+
+        values[j - 1] = key;
+        --i;
+    } while ((i >= 0) && (i < values.size() - 1));
+
+    std::cout << values;
+}
+}  // namespace
+
+template <typename T>
+void insertionSort(Sorting type, std::vector<T> values)
+{
+    switch (type)
+    {
+        case Sorting::Increasing:
+            increasing(values);
+            break;
+        case Sorting::Decreasing:
+            decreasing(values);
+            break;
+        default:
+            std::cout << "No valid sorting type is defined";
+    }
 }
 
 #endif  // CODINGDOJO_01_INSERTION_SORT_H
