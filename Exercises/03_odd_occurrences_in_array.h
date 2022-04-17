@@ -33,13 +33,34 @@ int oddOccurrencesInArray(std::vector<int> &A) {
         return -1;
     }
 
-    unsigned long long int sum = 0;
+    std::list<int> paired_numbers;
 
-    for (int i : A)
+    for(const auto & input_element : A)
     {
-        // A xor B xor A = B
-        sum ^= i;
+        // Erase existing element, else add to list
+        const auto it = std::equal_range(paired_numbers.cbegin(), paired_numbers.cend(), input_element);
+
+        if(it.first == paired_numbers.end())
+        {
+            paired_numbers.push_back(input_element);
+        }
+        else if(*it.first == input_element)
+        {
+            paired_numbers.erase(it.first);
+        }
+        else
+        {
+            paired_numbers.insert(it.first, input_element);
+        }
     }
 
-    return sum;
+    /* Codility solution */
+    //    unsigned long long int sum = 0;
+    //
+    //    for (unsigned int i=0; i<size; i++) {
+    //        // A xor B xor A = B
+    //        sum ^= A[i];
+    //    }
+
+    return paired_numbers.back();
 }

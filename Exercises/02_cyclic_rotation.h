@@ -1,7 +1,7 @@
 /*
-An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index,
-and the last element of the array is moved to the first place. For example, the rotation of array
-A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
+An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one
+index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9,
+7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
 
 The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
 
@@ -40,8 +40,8 @@ each element of array A is an integer within the range [−1,000..1,000].
 */
 
 #include <algorithm>
-#include <vector>
 #include <iostream>
+#include <vector>
 
 #define MIN_SHIFT_NUM 0
 #define MAX_SHIFT_NUM 100
@@ -58,9 +58,10 @@ std::vector<int> cyclicRotation(std::vector<int>& A, int K)
     }
 
     // Assumption: Each element of array A is an integer within the range [−1,000..1,000]
-    const bool in_boundary = std::none_of(A.cbegin(), A.cend(), [](const int e) { return e < MIN_ARRAY_ELEMENT && e > MAX_ARRAY_ELEMENT; });
+    const bool in_boundary =
+        std::none_of(A.cbegin(), A.cend(), [](const int e) { return e < MIN_ARRAY_ELEMENT && e > MAX_ARRAY_ELEMENT; });
 
-    if(!in_boundary)
+    if (!in_boundary)
     {
         std::cout << "Array elements are not withing boundaries\n";
         return {};
@@ -71,9 +72,9 @@ std::vector<int> cyclicRotation(std::vector<int>& A, int K)
     int shift_index{0};
     int cycles_remainder = K % A.size();
 
-    for(std::size_t i{0}; i < A.size(); ++i)
+    for (std::size_t i{0}; i < A.size(); ++i)
     {
-        if((i + cycles_remainder) >= A.size())
+        if ((i + cycles_remainder) >= A.size())
         {
             shift_index = cycles_remainder - (A.size() - i);
         }
@@ -85,10 +86,31 @@ std::vector<int> cyclicRotation(std::vector<int>& A, int K)
         result.at(shift_index) = A[i];
     }
 
-    for(const auto & e : result)
+    for (const auto& e : result)
     {
         std::cout << e << "\n";
     }
+
+    /* Codility solution */
+    //    int n = A.size();
+    //    vector<int> B(n, 0);
+    //
+    //    // Handle case of empty input array
+    //    if (!n) {
+    //        return B;
+    //    }
+    //
+    //    int index = 0;
+    //    if (K%n) {
+    //        index = (n-K%n);
+    //    }
+    //
+    //    // Copy elements from A to B, starting at the
+    //    // calculated index
+    //    for (int i=0; i<n; i++) {
+    //        B[i] = A[index];
+    //        index = ((index+1)%n);
+    //    }
 
     return result;
 }
