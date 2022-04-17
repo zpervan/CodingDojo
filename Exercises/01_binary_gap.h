@@ -20,7 +20,7 @@ N is an integer within the range [1..2,147,483,647].
 #include <vector>
 #include <iostream>
 
-int solution(int N) {
+int binaryGap(int N) {
   if(N < 0)
   {
     std::cout << "Passed number is negative! Aborting...";
@@ -79,10 +79,4 @@ int solution(int N) {
   }
 
   return max_number_of_gaps;
-}
-
-int main()
-{
-    solution(32);
-    return 0;
 }

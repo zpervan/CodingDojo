@@ -1,0 +1,10 @@
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    deps = ["//Exercises:exercises"],
+)
+
+cc_library(
+    name = "exercises",
+    srcs = glob(["*.h"]),
+)
