@@ -16,7 +16,11 @@ int main()
     //    oddOccurrencesInArray(odd_occurrences_array);
 
     /* 04 - Frog jump */
-    frogJump(10, 85, 105);
+    //    frogJump(10, 85, 105);
+
+    /* 05 - Missing element */
+    std::vector<int> missing_element_array{2, 3};
+    missingElement(missing_element_array);
 
     return 0;
 }
