@@ -19,8 +19,12 @@ int main()
     //    frogJump(10, 85, 105);
 
     /* 05 - Missing element */
-    std::vector<int> missing_element_array{2, 3};
-    missingElement(missing_element_array);
+    //    std::vector<int> missing_element_array{2, 3};
+    //    missingElement(missing_element_array);
+
+    /* 06 - Frog river */
+    std::vector<int> frog_river_array{1, 3, 1, 2, 3, 5, 6, 4, 4};
+    frogRiver(5, frog_river_array);
 
     return 0;
 }
