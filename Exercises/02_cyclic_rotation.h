@@ -91,6 +91,8 @@ std::vector<int> cyclicRotation(std::vector<int>& A, int K)
         std::cout << e << "\n";
     }
 
+    return result;
+
     /* Codility solution */
     //    int n = A.size();
     //    vector<int> B(n, 0);
@@ -111,6 +113,4 @@ std::vector<int> cyclicRotation(std::vector<int>& A, int K)
     //        B[i] = A[index];
     //        index = ((index+1)%n);
     //    }
-
-    return result;
 }

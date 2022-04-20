@@ -8,5 +8,6 @@
 #include "05_missing_element.h"
 #include "06_frog_river.h"
 #include "07_perm_check.h"
+#include "08_passing_cars.h"
 
 #endif  // CODINGDOJO_00_SINGLE_HEADER_H

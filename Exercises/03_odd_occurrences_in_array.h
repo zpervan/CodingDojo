@@ -54,6 +54,8 @@ int oddOccurrencesInArray(std::vector<int> &A) {
         }
     }
 
+    return paired_numbers.back();
+
     /* Codility solution */
     //    unsigned long long int sum = 0;
     //
@@ -61,6 +63,4 @@ int oddOccurrencesInArray(std::vector<int> &A) {
     //        // A xor B xor A = B
     //        sum ^= A[i];
     //    }
-
-    return paired_numbers.back();
 }

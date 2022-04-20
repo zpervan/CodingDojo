@@ -17,91 +17,99 @@ N is an integer within the range [1..2,147,483,647].
 
 */
 
-#include <vector>
+#include <cmath>
 #include <iostream>
+#include <vector>
 
 int binaryGap(int N) {
-  if(N < 0)
-  {
-    std::cout << "Passed number is negative! Aborting...";
-    return -1;
-  }
-
-  std::vector<bool> result_vector;
-
-  // Convert to binary
-  while(N != 0)
-  {
-    result_vector.emplace_back(N % 2);
-    N/= 2;
-  }
-
-  // Check for gaps
-  int max_number_of_gaps{0};
-  int number_of_gaps{0};
-  int i{static_cast<int>(result_vector.size() - 1)};
-  bool opening_one{false};
-  bool closing_one{false};
-
-  while(i != -1)
-  {
-    // Check if we encountered a gap beginning
-    if((result_vector[i] == 0) && (result_vector[i+1]) && (!opening_one))
-    {
-      opening_one = true;
-    }
-
-    // Check if we encountered a gap ending
-    if(opening_one && (result_vector[i] == 1))
-    {
-      closing_one = true;
-    }
-    
-    if(opening_one && (!closing_one)) 
-    {
-      ++number_of_gaps;
-    }
-
-    // If we encircled a gap, set the highest gap value and reset
-    if(opening_one && closing_one)
-    {
-      if(number_of_gaps > max_number_of_gaps)
-      {
-        max_number_of_gaps = number_of_gaps;
-      }
-
-      number_of_gaps = 0;
-      opening_one = false;
-      closing_one = false;
-    }
-    
-    --i;
-  }
+//  if(N < 0)
+//  {
+//    std::cout << "Passed number is negative! Aborting...";
+//    return -1;
+//  }
+//
+//  std::vector<bool> result_vector;
+//
+//  // Convert to binary
+//  while(N != 0)
+//  {
+//    result_vector.emplace_back(N % 2);
+//    N/= 2;
+//  }
+//
+//  // Check for gaps
+//  int max_number_of_gaps{0};
+//  int number_of_gaps{0};
+//  int i{static_cast<int>(result_vector.size() - 1)};
+//  bool opening_one{false};
+//  bool closing_one{false};
+//
+//  while(i != -1)
+//  {
+//    // Check if we encountered a gap beginning
+//    if((result_vector[i] == 0) && (result_vector[i+1]) && (!opening_one))
+//    {
+//      opening_one = true;
+//    }
+//
+//    // Check if we encountered a gap ending
+//    if(opening_one && (result_vector[i] == 1))
+//    {
+//      closing_one = true;
+//    }
+//
+//    if(opening_one && (!closing_one))
+//    {
+//      ++number_of_gaps;
+//    }
+//
+//    // If we encircled a gap, set the highest gap value and reset
+//    if(opening_one && closing_one)
+//    {
+//      if(number_of_gaps > max_number_of_gaps)
+//      {
+//        max_number_of_gaps = number_of_gaps;
+//      }
+//
+//      number_of_gaps = 0;
+//      opening_one = false;
+//      closing_one = false;
+//    }
+//
+//    --i;
+//  }
+//
+//  return max_number_of_gaps;
 
   /* Codility solution */
-  //  int numBits = floor(std::log2(N))+1;
-  //
-  //  bool foundOne = false;
-  //  int maximumGap = 0;
-  //  int possibleGap = 0;
-  //
-  //  for (int i=0; i<numBits; i++) {
-  //      // find a 0
-  //      if ( foundOne && !(N & (1<<i))) {
-  //          possibleGap++;
-  //      } else if ((N & (1<<i))) {
-  //          // If we found a one, set the gap length and reset the
-  //          // current counter
-  //          if (foundOne) {
-  //              if (possibleGap > maximumGap) {
-  //                  maximumGap = possibleGap;
-  //              }
-  //              possibleGap = 0;
-  //          }
-  //          foundOne = true;
-  //      }
-  //  }
-  //
-  //  return maximumGap;
-  return max_number_of_gaps;
+    int numBits = floor(std::log2(N))+1;
+
+    bool foundOne = false;
+    int maximumGap = 0;
+    int possibleGap = 0;
+
+    for (int i = 0; i < numBits; i++)
+    {
+        // find a 0
+        if (foundOne && !(N & (1 << i)))
+        {
+            possibleGap++;
+        }
+        else if ((N & (1 << i)))
+        {
+            // If we found a one, set the gap length and reset the
+            // current counter
+            if (foundOne)
+            {
+                if (possibleGap > maximumGap)
+                {
+                    maximumGap = possibleGap;
+                }
+                possibleGap = 0;
+            }
+            foundOne = true;
+        }
+    }
+
+    return maximumGap;
 }
