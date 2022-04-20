@@ -23,8 +23,11 @@ int main()
     //    missingElement(missing_element_array);
 
     /* 06 - Frog river */
-    std::vector<int> frog_river_array{1, 3, 1, 2, 3, 5, 6, 4, 4};
-    frogRiver(5, frog_river_array);
+    //    std::vector<int> frog_river_array{1, 3, 1, 2, 3, 5, 6, 4, 4};
+    //    frogRiver(5, frog_river_array);
 
+    /* 07 - Permutation check */
+    std::vector<int> permutation_check_array{5, 6, 8};
+    permCheck(permutation_check_array);
     return 0;
 }

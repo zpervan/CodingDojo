@@ -7,5 +7,6 @@
 #include "04_frog_jump.h"
 #include "05_missing_element.h"
 #include "06_frog_river.h"
+#include "07_perm_check.h"
 
 #endif  // CODINGDOJO_00_SINGLE_HEADER_H
