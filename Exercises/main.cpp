@@ -8,7 +8,6 @@ int main()
     /* 02 - Cyclic Rotation */
     //    std::vector<int> cyclic_rotation_array{3, 8, 9, 7, 6};
     //    int rotation{4};
-
     //    cyclicRotation(cyclic_rotation_array, rotation);
 
     /* 03 - Odd occurrences */
@@ -27,7 +26,12 @@ int main()
     //    frogRiver(5, frog_river_array);
 
     /* 07 - Permutation check */
-    std::vector<int> permutation_check_array{5, 6, 8};
-    permCheck(permutation_check_array);
+    //    std::vector<int> permutation_check_array{5, 6, 8};
+    //    permCheck(permutation_check_array);
+
+    /* 08 - Passing cars */
+    std::vector<int> passing_cars_array{0, 1, 0, 1, 1};
+    passingCars(passing_cars_array);
+
     return 0;
 }
