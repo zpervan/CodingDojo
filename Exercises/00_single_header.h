@@ -9,5 +9,6 @@
 #include "06_frog_river.h"
 #include "07_perm_check.h"
 #include "08_passing_cars.h"
+#include "09_rotate_numbers.h"
 
 #endif  // CODINGDOJO_00_SINGLE_HEADER_H

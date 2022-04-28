@@ -30,8 +30,12 @@ int main()
     //    permCheck(permutation_check_array);
 
     /* 08 - Passing cars */
-    std::vector<int> passing_cars_array{0, 1, 0, 1, 1};
-    passingCars(passing_cars_array);
+    //    std::vector<int> passing_cars_array{0, 1, 0, 1, 1};
+    //    passingCars(passing_cars_array);
+
+    /* 09 - Rotate numbers */
+    std::vector<int> numbers_to_rotate{0, 1, 2, 3, 4, 5, 6, 7};
+    rotateNumbers(numbers_to_rotate);
 
     return 0;
 }
