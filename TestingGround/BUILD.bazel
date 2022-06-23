@@ -1,10 +1,24 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_proto//proto:defs.bzl", "proto_library")
 
 cc_binary(
     name = "testing_ground",
-    srcs = ["pimpl.cpp"],
+    srcs = ["protobuf.cpp"],
     # linkopts = ["-lfmt"],
-    deps = ["@fmtlib//:fmt"],
+    deps = [
+        ":example_cc_proto",
+        "@fmtlib//:fmt",
+    ],
     #    linkopts=["-fsanitize=address,undefined"],
     #    copts=["-fsanitize=address,undefined"]
+)
+
+cc_proto_library(
+    name = "example_cc_proto",
+    deps = [":example_proto"],
+)
+
+proto_library(
+    name = "example_proto",
+    srcs = ["proto_lib/example.proto"],
 )
