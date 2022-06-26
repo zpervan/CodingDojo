@@ -4,7 +4,7 @@ load("@rules_proto//proto:defs.bzl", "proto_library")
 cc_binary(
     name = "testing_ground",
     srcs = ["protobuf.cpp"],
-    # linkopts = ["-lfmt"],
+    linkopts = ["-lstdc++fs"],
     deps = [
         ":example_cc_proto",
         "@fmtlib//:fmt",
