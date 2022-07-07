@@ -34,8 +34,11 @@ int main()
     //    passingCars(passing_cars_array);
 
     /* 09 - Rotate numbers */
-    std::vector<int> numbers_to_rotate{0, 1, 2, 3, 4, 5, 6, 7};
-    rotateNumbers(numbers_to_rotate);
+    //    std::vector<int> numbers_to_rotate{0, 1, 2, 3, 4, 5, 6, 7};
+    //    rotateNumbers(numbers_to_rotate);
+
+    /* 10 - Cyclic table */
+    cyclicTable();
 
     return 0;
 }
