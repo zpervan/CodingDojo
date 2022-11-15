@@ -1,8 +1,6 @@
 package main
 
-import (
-	"Codingdojo/Concepts"
-)
+import "Codingdojo/Concepts"
 
 func main() {
 	// Struct examples
@@ -11,6 +9,9 @@ func main() {
 
 	// Generics example
 	//	Concepts.GenericsExample()
+
+    // Goroutines example
+    Concepts.GoroutinesExample()
 
 	// Bitwise operation examples
 	//	var number = 1 << 10
