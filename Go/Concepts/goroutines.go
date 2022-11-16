@@ -2,17 +2,54 @@ package Concepts
 
 import (
 	"fmt"
-	"strconv"
+	//	"strconv"
 	"sync"
 	"time"
 )
 
-func someConcurrentFunction(wg *sync.WaitGroup) {
+func dummyFunction(wg *sync.WaitGroup) {
 	defer wg.Done()
 
 	time.Sleep(2 * time.Second)
 
 	fmt.Println("Time is up - Calling no argument function")
+}
+
+func closureExample(wg *sync.WaitGroup) {
+	go func() {
+		defer wg.Done()
+		fmt.Println("Calling from a closure")
+		for i := 0; i < 10; i++ {
+			fmt.Println("Printing ", i)
+		}
+	}()
+}
+func selectExample() {
+	channelOne := make(chan int)
+	channelTwo := make(chan int)
+
+	go func() {
+		time.Sleep(2 * time.Second)
+		channelOne <- 10
+	}()
+
+	go func() {
+		time.Sleep(1 * time.Second)
+		channelTwo <- 20
+	}()
+
+	for i := 0; i < 2; i++ {
+		select {
+		case msgOne := <-channelOne:
+			fmt.Println("Printing message one: ", msgOne)
+
+		case msgTwo := <-channelTwo:
+			fmt.Println("Printing message two: ", msgTwo)
+		}
+	}
+
+	close(channelOne)
+	close(channelTwo)
 }
 
 func GoroutinesExample() {
@@ -21,14 +58,8 @@ func GoroutinesExample() {
 
 	fmt.Println("Starting goroutines")
 
-	go someConcurrentFunction(&wg)
-	go func() {
-		defer wg.Done()
-		fmt.Println("Calling from a closure")
-		for i := 0; i < 10; i++ {
-			fmt.Println("Printing " + strconv.Itoa(i))
-		}
-	}()
+	dummyFunction(&wg)
+	closureExample(&wg)
 
-	wg.Wait()
+	selectExample()
 }
