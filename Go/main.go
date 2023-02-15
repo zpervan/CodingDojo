@@ -1,6 +1,6 @@
 package main
 
-import "Codingdojo/Concepts"
+import "CodingDojo/Concepts"
 
 func main() {
 	// Struct examples
