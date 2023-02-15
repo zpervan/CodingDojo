@@ -23,5 +23,8 @@ func main() {
 	//	}
 
 	// Sync examples
-	Concepts.SyncExamples()
+	// Concepts.SyncExamples()
+
+	// Serialization examples
+	Concepts.SerializationExample()
 }
