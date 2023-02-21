@@ -26,7 +26,14 @@ func GenericFunction[T string | int](data []T) {
 	fmt.Println(data)
 }
 
+func InterfaceDataType(anyData... any) {
+	for _, v := range anyData{
+		fmt.Println(v)
+	}
+}
+
 func GenericsExample() {
     GenericFunction([]string{"ajnc", "cvaj"})
     GenericFunction([]int{10, 20})
+	InterfaceDataType([]string{"was", "ist", "das"})
 }
