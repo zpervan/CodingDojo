@@ -1,6 +1,8 @@
 package main
 
-import "CodingDojo/Concepts"
+import (
+	"CodingDojo/Concepts"
+)
 
 func main() {
 	// Struct examples
@@ -26,5 +28,9 @@ func main() {
 	// Concepts.SyncExamples()
 
 	// Serialization examples
-	Concepts.SerializationExample()
+	// Concepts.SerializationExample()
+
+	// Anonymous functions and closure examples
+	Concepts.AnonymousFunctionExample()
+	Concepts.ClosureExample()
 }
