@@ -52,6 +52,28 @@ func selectExample() {
 	close(channelTwo)
 }
 
+var count int
+var mutex sync.Mutex
+func increment() {
+    mutex.Lock()
+    count++
+    mutex.Unlock()
+}
+
+func mutexExample() {
+    fmt.Println("mutex example")
+    var wg sync.WaitGroup
+    for i := 0; i < 10; i++ {
+        wg.Add(1)
+        go func() {
+            defer wg.Done()
+            increment()
+        }()
+    }
+    wg.Wait()
+    fmt.Println("Count:", count)
+}
+
 func GoroutinesExample() {
 	wg := sync.WaitGroup{}
 	wg.Add(2)
@@ -60,6 +82,7 @@ func GoroutinesExample() {
 
 	dummyFunction(&wg)
 	closureExample(&wg)
+    mutexExample()
 
 	selectExample()
 }
