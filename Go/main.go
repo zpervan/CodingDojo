@@ -31,6 +31,9 @@ func main() {
 	// Concepts.SerializationExample()
 
 	// Anonymous functions and closure examples
-	Concepts.AnonymousFunctionExample()
-	Concepts.ClosureExample()
+    // Concepts.AnonymousFunctionExample()
+    // Concepts.ClosureExample()
+
+    // Channels example
+    Concepts.IncrementingValueChannelsExample()
 }
