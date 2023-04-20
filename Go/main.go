@@ -33,7 +33,8 @@ func main() {
 	// Anonymous functions and closure examples
     // Concepts.AnonymousFunctionExample()
     // Concepts.ClosureExample()
+	Concepts.PassingAnonymousFunctionAsParam(func(data string) string { return data + " from function"})
 
     // Channels example
-    Concepts.IncrementingValueChannelsExample()
+    // Concepts.IncrementingValueChannelsExample()
 }

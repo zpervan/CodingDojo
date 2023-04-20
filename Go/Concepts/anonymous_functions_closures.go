@@ -20,6 +20,10 @@ func AnonymousFunctionExample() {
 	fmt.Println(sum)
 }
 
+func PassingAnonymousFunctionAsParam(passedFunction func(string) string){
+	fmt.Println("Function string" + passedFunction(" Bla bla"))
+}
+
 func ClosureExample() {
 	fmt.Println("Closure result")
 
