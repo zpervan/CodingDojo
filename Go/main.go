@@ -1,8 +1,6 @@
 package main
 
-import (
-	"CodingDojo/Concepts"
-)
+import "CodingDojo/Concepts"
 
 func main() {
 	// Struct examples
@@ -31,10 +29,13 @@ func main() {
 	// Concepts.SerializationExample()
 
 	// Anonymous functions and closure examples
-    // Concepts.AnonymousFunctionExample()
-    // Concepts.ClosureExample()
-	Concepts.PassingAnonymousFunctionAsParam(func(data string) string { return data + " from function"})
+	// Concepts.AnonymousFunctionExample()
+	// Concepts.ClosureExample()
 
-    // Channels example
-    // Concepts.IncrementingValueChannelsExample()
+	// Channels example
+	// Concepts.IncrementingValueChannelsExample()
+	// Concepts.MultipleGoroutinesOneChannelExample()
+
+	// Examples combining multiple concepts
+	Concepts.ExampleWithChannelsAndSortingSlices()
 }
