@@ -6,7 +6,12 @@
 # Build folders
 **/*build*/
 **/bazel-*
+**/target/
 
 # Settings files
 **/.clwb
 **/.idea
+
+# Generated files
+*.sum
+*.lock
