@@ -1,9 +1,12 @@
+#[allow(dead_code)]
+
 mod concepts;
 
 fn main()
 {
     println!("Rust Coding Dojo");
 
-    // Simple function call and text output
-    concepts::basic::output_text();
+    // Basic functionalities
+    // concepts::basic::output_text();
+    concepts::basic::functions();
 }
