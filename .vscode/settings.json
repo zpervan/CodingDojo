@@ -60,5 +60,8 @@
         "random": "cpp",
         "regex": "cpp",
         "shared_mutex": "cpp"
-    }
+    },
+    "rust-analyzer.linkedProjects": [
+        "./Rust/Cargo.toml"
+    ]
 }
