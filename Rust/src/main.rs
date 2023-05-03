@@ -1,12 +1,11 @@
 #[allow(dead_code)]
-
 mod concepts;
 
-fn main()
-{
+fn main() {
     println!("Rust Coding Dojo");
 
     // Basic functionalities
     // concepts::basic::output_text();
-    concepts::basic::functions();
+    // concepts::basic::functions();
+    concepts::basic::iterating_over_data();
 }
