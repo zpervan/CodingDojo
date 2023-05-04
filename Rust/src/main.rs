@@ -11,5 +11,6 @@ fn main() {
     // concepts::basic::iterating_over_data();
 
     // Coding exercises and problems
-    exercises::palindrome::palindrome();
+    // exercises::palindrome::palindrome();
+    exercises::fizz_buzz::fizzbuzz();
 }
