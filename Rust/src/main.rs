@@ -12,5 +12,7 @@ fn main() {
 
     // Coding exercises and problems
     // exercises::palindrome::palindrome();
-    exercises::fizz_buzz::fizzbuzz();
+    // exercises::fizz_buzz::fizzbuzz();
+    // exercises::bit_manipulation::single_number();
+    exercises::bit_manipulation::power_of_two();
 }
