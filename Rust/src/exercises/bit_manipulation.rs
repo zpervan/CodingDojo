@@ -28,3 +28,19 @@ pub fn power_of_two() {
         println!("Value {} is a power of two", value);
     }
 }
+
+pub fn add() {
+    let mut a = 2;
+    let mut b = 3;
+    let mut carry = 0;
+    let mut result = 0;
+
+    while b != 0 {
+        result = a ^ b;       // XOR
+        carry = (a & b) << 1; //
+        a = result;
+        b = carry;
+    }
+
+    println!("a+b={}", result);
+}
