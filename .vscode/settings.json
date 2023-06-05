@@ -63,5 +63,6 @@
     },
     "rust-analyzer.linkedProjects": [
         "./Rust/Cargo.toml"
-    ]
+    ],
+    "cmake.configureOnOpen": false
 }

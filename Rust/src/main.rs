@@ -9,7 +9,7 @@ fn main() {
     // concepts::basic::output_text();
     // concepts::basic::functions();
     // concepts::basic::iterating_over_data();
-    concepts::structs::simple_struct();
+    // concepts::structs::simple_struct();
 
     // Coding exercises and problems
     // exercises::palindrome::palindrome();
@@ -17,4 +17,5 @@ fn main() {
     // exercises::bit_manipulation::single_number();
     // exercises::bit_manipulation::power_of_two();
     // exercises::bit_manipulation::add();
+    exercises::multithreading::arc_example();
 }
